@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷速 · 再次出发</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f5f0eb;
+      font-family: 'Georgia', 'Noto Serif SC', 'Source Han Serif SC', serif;
+      color: #2c2a28;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    /* 主视觉 */
+    .hero {
+      text-align: center;
+      padding: 3.5rem 1rem 2.8rem;
+      border-bottom: 1px solid #d9cfc4;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #2b2a27;
+      margin-bottom: 0.6rem;
+    }
+    .hero .sub {
+      font-size: 1rem;
+      color: #7a716b;
+      margin-top: 0.2rem;
+      font-style: italic;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+      margin: 2.8rem 0;
+    }
+    .card {
+      background: #fffcf8;
+      border-radius: 2px;
+      padding: 1.8rem 1.6rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      border: 1px solid #e3dbd2;
+      transition: all 0.2s ease;
+    }
+    .card:hover {
+      border-color: #b8aaa0;
+      box-shadow: 0 4px 14px rgba(60,45,35,0.06);
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      color: #3a3531;
+      border-left: 3px solid #baa99c;
+      padding-left: 0.8rem;
+    }
+    .card p, .card li {
+      font-size: 0.95rem;
+      color: #4b4641;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card li {
+      padding: 0.3rem 0;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .card li::before {
+      content: "·";
+      color: #9b8b80;
+      font-weight: bold;
+    }
+
+    /* 引用块 / 提示框 */
+    .inset-block {
+      background: #eae3db;
+      padding: 1.6rem 2rem;
+      margin: 2.5rem 0;
+      border-left: 5px solid #7f6e62;
+      font-style: italic;
+      color: #2f2b28;
+    }
+    .inset-block strong {
+      font-style: normal;
+      font-weight: 600;
+      color: #2b2520;
+    }
+
+    .note {
+      background: #fcf8f4;
+      border: 1px solid #d4cbc2;
+      padding: 1.2rem 1.6rem;
+      border-radius: 1px;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+    }
+    .note span {
+      background: #d7ccc2;
+      padding: 0.1rem 0.5rem;
+      margin-right: 0.4rem;
+      font-size: 0.8rem;
+      color: #1f1c1a;
+    }
+
+    /* 链接段落 */
+    .link-paragraph {
+      background: #fffcf8;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+      border: 1px solid #e1d8cf;
+      font-size: 1rem;
+    }
+    .link-paragraph a {
+      color: #4f413a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #b3a296;
+      font-weight: 500;
+    }
+    .link-paragraph a:hover {
+      color: #1f1a16;
+      text-decoration-color: #1f1a16;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      margin-top: 3rem;
+      padding-top: 1.8rem;
+      border-top: 1px dashed #ccc3b9;
+    }
+    .faq-summary h4 {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #3a3531;
+      margin-bottom: 1.2rem;
+    }
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+    .faq-item .q {
+      font-weight: 600;
+      color: #2b2622;
+    }
+    .faq-item .a {
+      color: #5a534d;
+      margin-top: 0.2rem;
+      padding-left: 0.5rem;
+      border-left: 2px solid #cfc3b8;
+    }
+
+    /* 底部 */
+    .footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #8d837b;
+      padding: 2.5rem 0 0.5rem;
+      border-top: 1px solid #ddd3c9;
+      margin-top: 3rem;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1.2rem 1rem; }
+      .hero h1 { font-size: 2rem; }
+      .card-grid { gap: 1.2rem; }
+      .inset-block { padding: 1.2rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 主视觉 -->
+  <div class="hero">
+    <h1>再次回到这里</h1>
+    <div class="sub">收藏 · 持续关注 · 保持连接</div>
+  </div>
+
+  <!-- 用途卡片：再次访问与收藏视角 -->
+  <div class="card-grid">
+    <div class="card">
+      <h3>为什么值得再次打开</h3>
+      <p>信息不断迭代，每日更新的赛事数据与深度内容让每次回访都有新发现。将页面加入书签栏，下次抵达只需一次点击。</p>
+    </div>
+    <div class="card">
+      <h3>适合哪些人持续关注</h3>
+      <ul>
+        <li>习惯用数据辅助判断的爱好者</li>
+        <li>需要快速浏览赛程、积分与动态的读者</li>
+        <li>希望保持信息连贯性、不愿中断跟踪的用户</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>如何保持连接</h3>
+      <p>将 <a href="https://free-leisu.com" style="text-decoration: underline; color: #4f413a;">雷速官网</a> 添加至浏览器收藏夹或主屏幕。定期回访能帮助你建立更完整的信息脉络。</p>
+    </div>
+  </div>
+
+  <!-- 引用块：从再次访问切入 -->
+  <div class="inset-block">
+    <strong>收藏的价值</strong> —— 当页面成为习惯性停靠点，你不再需要每次重新搜索、筛选、确认。持续关注本身即是效率。
+  </div>
+
+  <!-- 自然链接段落：嵌入 雷速官网 -->
+  <div class="link-paragraph">
+    对于有固定信息需求的用户，将 <a href="https://free-leisu.com">雷速官网</a> 放在常驻标签栏或笔记应用里，可以大幅降低每日的信息获取成本。不需要入口词，不需要导航，只需一个可靠的地址。
+  </div>
+
+  <!-- 提示框 -->
+  <div class="note">
+    <span>提示</span> 如果你过去曾访问过但忘记了具体内容，不妨从收藏夹或历史记录中重新定位。重复访问会加深你对数据结构的熟悉度。
+  </div>
+
+  <!-- FAQ 摘要：从持续关注的角度 -->
+  <div class="faq-summary">
+    <h4>关于持续关注，你可能想问</h4>
+    <div class="faq-item">
+      <div class="q">· 是否需要注册才能保持关注？</div>
+      <div class="a">不需要。直接访问即可获取当前信息。收藏网址是最轻量的跟踪方式。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">· 内容更新的频率如何？</div>
+      <div class="a">核心数据模块每日刷新，专题内容根据赛事周期更新。定期回访能获得最新状态。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">· 我该怎样记住这个地址？</div>
+      <div class="a">添加到浏览器书签，或在笔记中记下 <a href="https://free-leisu.com" style="color: #4f413a; text-decoration: underline;">雷速官网</a> 即可。不需要额外记忆关键词。</div>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    保持回访 · 信息自现
+  </div>
+
+</div>
+</body>
+</html>
